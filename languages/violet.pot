@@ -1,0 +1,1252 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Violet\n"
+"POT-Creation-Date: 2017-08-21 20:27+0600\n"
+"PO-Revision-Date: 2017-08-21 20:27+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:16
+msgid "It looks like nothing was found at this location."
+msgstr ""
+
+#: author.php:50
+msgid "Leave a comment"
+msgstr ""
+
+#: author.php:50
+msgid "1 Comment"
+msgstr ""
+
+#: author.php:50
+msgid "% Comments"
+msgstr ""
+
+#: author.php:61 index.php:33
+#, php-format
+msgid "Continue reading..%s"
+msgstr ""
+
+#: author.php:74 template-parts/content-none.php:3
+msgid "Sorry no post matched your criteria"
+msgstr ""
+
+#: author.php:88 index.php:48
+msgid "<i class=\"fa fa-chevron-left\"></i>"
+msgstr ""
+
+#: author.php:89 index.php:49
+msgid "<i class=\"fa fa-chevron-right\"></i>"
+msgstr ""
+
+#: author.php:90 index.php:50 search.php:29
+msgid "Page"
+msgstr ""
+
+#: comments.php:14
+#, php-format
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:30
+msgid "Previous"
+msgstr ""
+
+#: comments.php:31
+msgid "Next"
+msgstr ""
+
+#: comments.php:42
+msgid "Comments are closed."
+msgstr ""
+
+#: content.php:37
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: content.php:42
+msgid "Pages:"
+msgstr ""
+
+#: functions.php:9
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:106
+msgid "Use WordPress Menu builder OR Customizer to Manage Menus"
+msgstr ""
+
+#: functions.php:132
+msgctxt "Roboto font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:177
+msgid "Counter Area"
+msgstr ""
+
+#: functions.php:179
+msgid "The widgets added in this sidebar will appear in counter section."
+msgstr ""
+
+#: functions.php:283
+msgid "Design &amp; Developed by"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:328
+msgid "Install Plugins"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/activation/plugin-activation.php:330
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: inc/activation/plugin-activation.php:332
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#. translators: 1: plugin name(s).
+#: inc/activation/plugin-activation.php:336
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/activation/plugin-activation.php:342
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/activation/plugin-activation.php:348
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/activation/plugin-activation.php:354
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/activation/plugin-activation.php:360
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name(s).
+#: inc/activation/plugin-activation.php:366
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/activation/plugin-activation.php:371
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/activation/plugin-activation.php:376
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/activation/plugin-activation.php:381
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/activation/plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:386
+#: inc/activation/plugin-activation.php:827
+#: inc/activation/plugin-activation.php:2533
+#: inc/activation/plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:387
+#: inc/activation/plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:388
+#: inc/activation/plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: plugin name.
+#: inc/activation/plugin-activation.php:390
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/activation/plugin-activation.php:392
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#. translators: 1: dashboard link.
+#: inc/activation/plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:396
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:523
+msgid "Update Required"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:934
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:934
+#: inc/activation/plugin-activation.php:937
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:937
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:1121
+#: inc/activation/plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#. translators: %s: version number
+#: inc/activation/plugin-activation.php:1982
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2273
+msgid "Required"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2276
+msgid "Recommended"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2295
+msgid "External Source"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2315
+msgid "Not Installed"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2321
+msgid "Active"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2330
+msgid "Requires Update"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2333
+msgid "Update recommended"
+msgstr ""
+
+#. translators: 1: install status, 2: update status
+#: inc/activation/plugin-activation.php:2342
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: number of plugins.
+#: inc/activation/plugin-activation.php:2388
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/activation/plugin-activation.php:2392
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/activation/plugin-activation.php:2396
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: number of plugins.
+#: inc/activation/plugin-activation.php:2400
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/activation/plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2490
+msgid "Installed version:"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2510
+msgid "Available version:"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2547
+msgid "Plugin"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2548
+msgid "Source"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2549
+msgid "Type"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2553
+msgid "Version"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2554
+msgid "Status"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/activation/plugin-activation.php:2603
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/activation/plugin-activation.php:2608
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/activation/plugin-activation.php:2614
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2717
+msgid "Install"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2723
+msgid "Update"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2726
+msgid "Activate"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/activation/plugin-activation.php:3498
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/activation/plugin-activation.php:3501
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/activation/plugin-activation.php:3503
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:3507
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/activation/plugin-activation.php:3509
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:3509
+#: inc/activation/plugin-activation.php:3517
+msgid "Show Details"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:3509
+#: inc/activation/plugin-activation.php:3517
+msgid "Hide Details"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/activation/plugin-activation.php:3512
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/activation/plugin-activation.php:3515
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#. translators: 1: plugin name.
+#: inc/activation/plugin-activation.php:3517
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/activation/plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr ""
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/activation/plugin-activation.php:3520
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/admin/customizer.php:27
+msgid "General Settings"
+msgstr ""
+
+#: inc/admin/customizer.php:31
+msgid "Section Control"
+msgstr ""
+
+#: inc/admin/customizer.php:32
+msgid "Which sections do you want to show or hide, simply check"
+msgstr ""
+
+#: inc/admin/customizer.php:44
+msgid "Enable slider section?"
+msgstr ""
+
+#: inc/admin/customizer.php:59
+msgid "About Us section?"
+msgstr ""
+
+#: inc/admin/customizer.php:73
+msgid "My Skill section?"
+msgstr ""
+
+#: inc/admin/customizer.php:86
+msgid "My Services section?"
+msgstr ""
+
+#: inc/admin/customizer.php:100
+msgid "Enable counter section?"
+msgstr ""
+
+#: inc/admin/customizer.php:113
+msgid "Enable Portfolio section?"
+msgstr ""
+
+#: inc/admin/customizer.php:126
+msgid "Enable Testimonial section?"
+msgstr ""
+
+#: inc/admin/customizer.php:140
+msgid "Enable our team section?"
+msgstr ""
+
+#: inc/admin/customizer.php:154
+msgid "Enable our partner section?"
+msgstr ""
+
+#: inc/admin/customizer.php:167
+msgid "Enable Blog section?"
+msgstr ""
+
+#: inc/admin/customizer.php:180
+msgid "Enable Call to action section?"
+msgstr ""
+
+#: inc/admin/customizer.php:193
+msgid "Enable Contact Us section?"
+msgstr ""
+
+#: inc/admin/customizer.php:204
+msgid "Profile Settings"
+msgstr ""
+
+#: inc/admin/customizer.php:214
+msgid "Name: "
+msgstr ""
+
+#: inc/admin/customizer.php:226
+msgid "Age: "
+msgstr ""
+
+#: inc/admin/customizer.php:236
+msgid ""
+"Expert in Web Design .Taken a training from Basis Institute of Technology "
+"and Management (BITM) for the special field of Web Design."
+msgstr ""
+
+#: inc/admin/customizer.php:239
+msgid "About You"
+msgstr ""
+
+#: inc/admin/customizer.php:252
+msgid "Professional skills. Max 3 and Must be comma(,) seperated"
+msgstr ""
+
+#: inc/admin/customizer.php:261
+msgid "+8801776217594"
+msgstr ""
+
+#: inc/admin/customizer.php:264
+msgid "Pnone Number: "
+msgstr ""
+
+#: inc/admin/customizer.php:273
+msgid "serakib@gmail.com"
+msgstr ""
+
+#: inc/admin/customizer.php:276
+msgid "Email: "
+msgstr ""
+
+#: inc/admin/customizer.php:285
+msgid "Paikpara,Mirpur,Dhaka-1216,Bangladesh"
+msgstr ""
+
+#: inc/admin/customizer.php:288
+msgid "Your Full Address"
+msgstr ""
+
+#: inc/admin/customizer.php:298
+msgid "Dhaka,BD"
+msgstr ""
+
+#: inc/admin/customizer.php:301
+msgid "User Short Address"
+msgstr ""
+
+#: inc/admin/customizer.php:314
+msgid "Profile Photo"
+msgstr ""
+
+#: inc/admin/customizer.php:326
+msgid "Section Settings"
+msgstr ""
+
+#: inc/admin/customizer.php:335
+msgid "Main Section"
+msgstr ""
+
+#: inc/admin/customizer.php:347
+msgid "Gretings"
+msgstr ""
+
+#: inc/admin/customizer.php:359
+msgid "Message"
+msgstr ""
+
+#: inc/admin/customizer.php:372
+msgid "Button Text"
+msgstr ""
+
+#: inc/admin/customizer.php:384 inc/admin/customizer.php:1001
+msgid "Button Link URL"
+msgstr ""
+
+#: inc/admin/customizer.php:397 inc/admin/customizer.php:580
+#: inc/admin/customizer.php:668 inc/admin/customizer.php:767
+#: inc/admin/customizer.php:853 inc/admin/customizer.php:936
+#: inc/admin/widgets.php:64
+msgid "Image"
+msgstr ""
+
+#: inc/admin/customizer.php:409 inc/admin/customizer.php:592
+#: inc/admin/customizer.php:680 inc/admin/customizer.php:779
+#: inc/admin/customizer.php:865 inc/admin/customizer.php:948
+#: inc/admin/violet-meta.php:138 inc/admin/violet-meta.php:162
+#: inc/admin/violet-meta.php:186 inc/admin/violet-meta.php:209
+msgid "Color"
+msgstr ""
+
+#: inc/admin/customizer.php:423 inc/admin/customizer.php:606
+#: inc/admin/customizer.php:694 inc/admin/customizer.php:793
+#: inc/admin/customizer.php:879 inc/admin/customizer.php:962
+msgid "Background Opacity"
+msgstr ""
+
+#: inc/admin/customizer.php:433
+msgid "About US Section"
+msgstr ""
+
+#: inc/admin/customizer.php:443
+msgid "About Us Title"
+msgstr ""
+
+#: inc/admin/customizer.php:453
+msgid "About Us Description"
+msgstr ""
+
+#: inc/admin/customizer.php:464
+msgid "CV Button Text"
+msgstr ""
+
+#: inc/admin/customizer.php:475
+msgid "CV Button Link URL"
+msgstr ""
+
+#: inc/admin/customizer.php:485
+msgid "Hire Button Text"
+msgstr ""
+
+#: inc/admin/customizer.php:496
+msgid "Hire Button Link URL"
+msgstr ""
+
+#: inc/admin/customizer.php:543 inc/admin/customizer.php:551
+msgid "My Skill"
+msgstr ""
+
+#: inc/admin/customizer.php:556 inc/admin/customizer.php:633
+#: inc/admin/customizer.php:718 inc/admin/customizer.php:816
+msgid "Title"
+msgstr ""
+
+#: inc/admin/customizer.php:564
+msgid "Provide your skill Description."
+msgstr ""
+
+#: inc/admin/customizer.php:569
+msgid "Our skill Description"
+msgstr ""
+
+#: inc/admin/customizer.php:617
+msgid "Service section"
+msgstr ""
+
+#: inc/admin/customizer.php:620
+msgid ""
+"The main content of this section is customizable in: Dashboard -> Services "
+"Our team section."
+msgstr ""
+
+#: inc/admin/customizer.php:628
+msgid "Service"
+msgstr ""
+
+#: inc/admin/customizer.php:641
+msgid "Provide your service description."
+msgstr ""
+
+#: inc/admin/customizer.php:646
+msgid "Service Description"
+msgstr ""
+
+#: inc/admin/customizer.php:657
+msgid "Counter Section"
+msgstr ""
+
+#: inc/admin/customizer.php:658
+msgid ""
+"*In order to get this section to show up on the front-page, make sure you "
+"have: 1) enabled static front-page & 2) have a widget placed in this "
+"sidebar. More specifically go to Widgets -> Front page - counter sidebar & "
+"place the Violet - Counter widget in here."
+msgstr ""
+
+#: inc/admin/customizer.php:704
+msgid "Portfolio section"
+msgstr ""
+
+#: inc/admin/customizer.php:707
+msgid ""
+"The main content of this section is customizable in: Dashboard -> Protfolio."
+msgstr ""
+
+#: inc/admin/customizer.php:713
+msgid "Portfolio"
+msgstr ""
+
+#: inc/admin/customizer.php:726
+msgid "Provide your Portfolio Description."
+msgstr ""
+
+#: inc/admin/customizer.php:731
+msgid "Service subtitle"
+msgstr ""
+
+#: inc/admin/customizer.php:744
+msgid "Provide your Portfolio Categoties. Must be comma (,) seperated"
+msgstr ""
+
+#: inc/admin/customizer.php:756
+msgid "Testimonial Section"
+msgstr ""
+
+#: inc/admin/customizer.php:757 inc/admin/customizer.php:843
+#: inc/admin/customizer.php:927
+msgid "*You Can Change Background Settings."
+msgstr ""
+
+#: inc/admin/customizer.php:803 sections/team.php:5
+msgid "Our Team"
+msgstr ""
+
+#: inc/admin/customizer.php:811
+msgid "YOUR TEAM"
+msgstr ""
+
+#: inc/admin/customizer.php:824 sections/team.php:6
+msgid ""
+"Prove that you have real people working for you, with some nice looking "
+"profile pictures and links to social media."
+msgstr ""
+
+#: inc/admin/customizer.php:829
+msgid "Our team subtitle"
+msgstr ""
+
+#: inc/admin/customizer.php:842
+msgid "Partner Section"
+msgstr ""
+
+#: inc/admin/customizer.php:890
+msgid "Blog Area Options"
+msgstr ""
+
+#: inc/admin/customizer.php:897
+msgid "Blog"
+msgstr ""
+
+#: inc/admin/customizer.php:901 inc/admin/customizer.php:913
+msgid "Heading For Blogs"
+msgstr ""
+
+#: inc/admin/customizer.php:909
+msgid "your blog Description"
+msgstr ""
+
+#: inc/admin/customizer.php:926
+msgid "Call To Action Section"
+msgstr ""
+
+#: inc/admin/customizer.php:971
+msgid "You think we are cool? lets work together"
+msgstr ""
+
+#: inc/admin/customizer.php:975
+msgid "Cal to action message"
+msgstr ""
+
+#: inc/admin/customizer.php:989
+msgid "Button text"
+msgstr ""
+
+#: inc/admin/customizer.php:1012
+msgid "Contact Section Options"
+msgstr ""
+
+#: inc/admin/customizer.php:1013
+msgid "Provide your Contact info."
+msgstr ""
+
+#: inc/admin/customizer.php:1020
+msgid "Contact Us."
+msgstr ""
+
+#: inc/admin/customizer.php:1024
+msgid "Heading Contact Us Section"
+msgstr ""
+
+#: inc/admin/customizer.php:1032
+msgid "Provide your Contact Us Description."
+msgstr ""
+
+#: inc/admin/customizer.php:1036
+msgid "Contact Us Sub title"
+msgstr ""
+
+#: inc/admin/customizer.php:1048
+msgid "Provide your Google map api key to enable map."
+msgstr ""
+
+#: inc/admin/customizer.php:1058
+msgid "Oh Shit!"
+msgstr ""
+
+#: inc/admin/customizer.php:1059
+msgid "WP_Customize_Panel class not exist. Contact with your admin"
+msgstr ""
+
+#: inc/admin/customizer.php:1068
+msgid "Footer Text"
+msgstr ""
+
+#: inc/admin/customizer.php:1076
+msgid "Footer Credit Text"
+msgstr ""
+
+#: inc/admin/customizer.php:1087
+msgid "Scoial Media Options"
+msgstr ""
+
+#: inc/admin/customizer.php:1097
+msgid "Facebook Page URL"
+msgstr ""
+
+#: inc/admin/customizer.php:1109
+msgid "Twitter Page URL"
+msgstr ""
+
+#: inc/admin/customizer.php:1121
+msgid "Linkedin Page URL"
+msgstr ""
+
+#: inc/admin/customizer.php:1133
+msgid "Github Page URL"
+msgstr ""
+
+#: inc/admin/customizer.php:1142
+msgid "Custom Style"
+msgstr ""
+
+#: inc/admin/customizer.php:1149
+msgid "Custom CSS"
+msgstr ""
+
+#: inc/admin/customizer.php:1160
+msgid "Menu background"
+msgstr ""
+
+#: inc/admin/customizer.php:1170
+msgid "Footer background"
+msgstr ""
+
+#: inc/admin/violet-mail.php:28
+#, php-format
+msgid "Site %s - Contact form message from %s"
+msgstr ""
+
+#: inc/admin/violet-mail.php:56
+#, php-format
+msgid " %s - Newsletter subscription confirmation email"
+msgstr ""
+
+#: inc/admin/violet-mail.php:57
+#, php-format
+msgid "Site %s - Newsletter subscription request from %s"
+msgstr ""
+
+#: inc/admin/violet-meta.php:8
+msgid "Testimonial Info"
+msgstr ""
+
+#: inc/admin/violet-meta.php:14 inc/admin/violet-meta.php:78
+msgid "Full Name"
+msgstr ""
+
+#: inc/admin/violet-meta.php:20 inc/admin/violet-meta.php:84
+msgid "Position"
+msgstr ""
+
+#: inc/admin/violet-meta.php:26
+msgid "Rating"
+msgstr ""
+
+#: inc/admin/violet-meta.php:36
+msgid "Portfolio Info"
+msgstr ""
+
+#: inc/admin/violet-meta.php:42
+msgid "Sub title"
+msgstr ""
+
+#: inc/admin/violet-meta.php:48
+msgid "Categories"
+msgstr ""
+
+#: inc/admin/violet-meta.php:55
+msgid "Portfolio full image"
+msgstr ""
+
+#: inc/admin/violet-meta.php:61
+msgid "Portfolio Link"
+msgstr ""
+
+#: inc/admin/violet-meta.php:71
+msgid "Team Info"
+msgstr ""
+
+#: inc/admin/violet-meta.php:91
+msgid "Enter Social Links"
+msgstr ""
+
+#: inc/admin/violet-meta.php:96
+msgid "Facebook"
+msgstr ""
+
+#: inc/admin/violet-meta.php:97
+msgid "Ex: http://facebook.com/prof.rakib"
+msgstr ""
+
+#: inc/admin/violet-meta.php:102
+msgid "Twitter"
+msgstr ""
+
+#: inc/admin/violet-meta.php:103
+msgid "Ex: http://twitter.com/serakib"
+msgstr ""
+
+#: inc/admin/violet-meta.php:108
+msgid "Linkedin"
+msgstr ""
+
+#: inc/admin/violet-meta.php:109
+msgid "Ex: http://www.linkedin.com/in/serakib"
+msgstr ""
+
+#: inc/admin/violet-meta.php:114
+msgid "Github"
+msgstr ""
+
+#: inc/admin/violet-meta.php:115
+msgid "Ex: http://www.github.com/serakib"
+msgstr ""
+
+#: inc/admin/violet-meta.php:121
+msgid "Enter Top 1 Skill"
+msgstr ""
+
+#: inc/admin/violet-meta.php:126 inc/admin/violet-meta.php:150
+#: inc/admin/violet-meta.php:174 inc/admin/violet-meta.php:226
+msgid "Name"
+msgstr ""
+
+#: inc/admin/violet-meta.php:127
+msgid "Skill Name (Ex: Photoshop)"
+msgstr ""
+
+#: inc/admin/violet-meta.php:132 inc/admin/violet-meta.php:156
+#: inc/admin/violet-meta.php:180 inc/admin/violet-meta.php:203
+msgid "Percent"
+msgstr ""
+
+#: inc/admin/violet-meta.php:133 inc/admin/violet-meta.php:157
+#: inc/admin/violet-meta.php:181 inc/admin/violet-meta.php:204
+msgid "Skill Percent out of 100"
+msgstr ""
+
+#: inc/admin/violet-meta.php:139 inc/admin/violet-meta.php:163
+#: inc/admin/violet-meta.php:187 inc/admin/violet-meta.php:210
+msgid "Skill Color"
+msgstr ""
+
+#: inc/admin/violet-meta.php:145
+msgid "Enter Top 2 Skill"
+msgstr ""
+
+#: inc/admin/violet-meta.php:151
+msgid "Skill Name (Ex: HTML)"
+msgstr ""
+
+#: inc/admin/violet-meta.php:169
+msgid "Enter Top 3 Skill"
+msgstr ""
+
+#: inc/admin/violet-meta.php:175
+msgid "Skill Name (Ex: CSS)"
+msgstr ""
+
+#: inc/admin/violet-meta.php:197
+msgid "Skill Information"
+msgstr ""
+
+#: inc/admin/violet-meta.php:219
+msgid "Partner Info"
+msgstr ""
+
+#: inc/admin/violet-meta.php:227
+msgid "Ex: Intel"
+msgstr ""
+
+#: inc/admin/violet-meta.php:232
+msgid "Website"
+msgstr ""
+
+#: inc/admin/violet-meta.php:233
+msgid "Ex: http://www.intel.com"
+msgstr ""
+
+#: inc/admin/widgets.php:8
+msgid "Violet - Counter"
+msgstr ""
+
+#: inc/admin/widgets.php:8
+msgid "Add this widget in \"Front page - Counter Sidebar\"."
+msgstr ""
+
+#: inc/admin/widgets.php:48
+msgid "Coee"
+msgstr ""
+
+#: inc/admin/widgets.php:50
+msgid "260"
+msgstr ""
+
+#: inc/admin/widgets.php:54
+msgid "Title:"
+msgstr ""
+
+#: inc/admin/widgets.php:58
+msgid "Data:"
+msgstr ""
+
+#: inc/admin/widgets.php:59
+msgid "The number the element should end at."
+msgstr ""
+
+#: inc/admin/widgets.php:70
+msgid "Uploaded image"
+msgstr ""
+
+#: inc/admin/widgets.php:77
+msgid "Upload Image"
+msgstr ""
+
+#: search.php:15
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: search.php:17
+msgid "Nothing Found"
+msgstr ""
+
+#: search.php:27
+msgid "Previous page"
+msgstr ""
+
+#: search.php:28
+msgid "Next page"
+msgstr ""
+
+#: search.php:32
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: searchform.php:9
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: sections/about.php:28
+msgid "About Us"
+msgstr ""
+
+#: sections/about.php:36
+msgid ""
+"Creating your website with violet is completely easy. You just need to "
+"perform few tweaks in the theme option panel and your website will be ready "
+"to use. You can showcase all important aspects of your business here on home "
+"page."
+msgstr ""
+
+#: sections/about.php:70
+msgid "CV"
+msgstr ""
+
+#: sections/about.php:77
+msgid "Hire"
+msgstr ""
+
+#: sections/skill.php:16
+msgid "MY Skill"
+msgstr ""
+
+#: sections/skill.php:23
+msgid "Have strong wordpress theme development skill"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Violet"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "http://crazylab.design/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Violet is a full responsive wordpress theme with a focus on postfolio sites, "
+"it features multiple sections on the front page as well as widgets, "
+"navigation and social menus, a logo, Portfolio Showcase, powerfull "
+"customizer and more. Showcase your portfolio. Works great in many languages, "
+"for any abilities, and on any device."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Rakib Hossain"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://rakibhossain.cf/"
+msgstr ""

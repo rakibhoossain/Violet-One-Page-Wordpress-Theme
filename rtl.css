@@ -1,0 +1,3 @@
+blockquote{border-right:none;}
+blockquote:before{right:0;}
+blockquote:after{left:10px;}
