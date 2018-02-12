@@ -26,7 +26,7 @@
                     $post_custom = get_post_custom($post_id);
                     $skill_percent = $post_custom["skill_percent"][0];
                     $skill_color = $post_custom["skill_color"][0];
-                    $skill_icon = get_template_directory_uri() . '/assets/images/ae.png';
+                    $skill_icon = get_template_directory_uri() . '/images/ae.png';
                 ?>
 
 
