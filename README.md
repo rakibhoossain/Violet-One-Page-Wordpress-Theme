@@ -31,6 +31,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 ## == Live ==
 Preview:  http://crazylab.design/
+
 Dashboard: http://demo.crazylab.design/
+
 Username: user
+
 Password: user
