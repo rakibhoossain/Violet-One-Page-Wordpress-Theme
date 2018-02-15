@@ -30,7 +30,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 ## == Live ==
-Preview:  http://crazylab.design/
+Preview:  http://rakibhossain.cf/
 
 Dashboard: http://demo.crazylab.design/
 
