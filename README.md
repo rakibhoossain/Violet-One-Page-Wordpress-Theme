@@ -3,6 +3,7 @@
 
 Violet is full responsive wordpress theme with a focus on postfolio sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, Portfolio Showcase, and more. Showcase your portfolio. Works great in many languages, for any abilities, and on any device.
 
+![screenshot](screenshot.png)
 Use it to make something cool, have fun, and share what you've learned with others.
 
 
