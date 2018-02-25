@@ -1,13 +1,17 @@
 <?php
-/*
- * Template Name: Front Page
+/**
+ * The front page template file
  *
+ * If the user has selected a static page for their homepage, this is what will
+ * appear.
+ * Learn more: https://codex.wordpress.org/Template_Hierarchy
  *
- * The template for displaying the front page
- *
- *
- * @package Violet
+ * @package WordPress
+ * @subpackage Violet
+ * @since 1.0
+ * @version 1.0
  */
+
 ?>
 <?php get_header(); ?>
 
