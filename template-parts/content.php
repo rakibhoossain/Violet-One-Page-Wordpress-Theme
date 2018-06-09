@@ -15,7 +15,7 @@
     </div>
     <div class="post-title-wrap text-center">
         <a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-        <p><?php the_time('F j, Y'); ?> | Posted by <?php the_author_posts_link(); ?></p>
+        <p><a href="<?php the_permalink(); ?>"><?php the_time('F j, Y'); ?></a> | <?php the_author_posts_link(); ?></p>
     </div>
     <div class="entry-content text-justify">
         <?php the_excerpt(); ?>              

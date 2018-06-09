@@ -19,9 +19,6 @@
             </div>
             <div class="col-md-9">
                 <article class="post wow fadeInUp">
-                    <!-- <div class="post-title-wrap">
-                        
-                    </div> -->
                     <div class="entry-content">    
                         <?php
                         if ( have_posts() ) :

@@ -6,6 +6,3 @@
 
 <?php do_action( 'before_sidebar' ); ?>
 <?php  dynamic_sidebar( 'blog-widget' ); ?>
-
-
-

@@ -15,17 +15,19 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-                <?php $args = array( 'post_type' => 'post', 'posts_per_page' => 3 );
+			<div class="row post-container">
+                <?php $args = array( 'post_type' => 'post', 'posts_per_page' => get_theme_mod('blog_posts_per_page',2));
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();?>
-                        <?php if ( has_post_thumbnail() ) {
-                        $feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
-                    }
-                        ?>
+                        
     			<div class="col-md-4 col-sm-6 col-xs-12">
-    				<div class="single-news text-center"><a href="<?php the_permalink(); ?>">
-                        <div class="blog-thumb" style="background-image: url(<?php echo $feat_image_url;?>);"></div></a>
+                    <div class="news-summary-height">
+    				<div class="single-news single-news-thumb text-center">
+                        <?php if ( has_post_thumbnail() ) {
+                            echo '<a class="blog-thumb-link" href="' . esc_url( get_the_permalink() ) . '">';
+                            $feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
+                            echo '<div class="blog-thumb" style="background-image: url(' . esc_url( $feat_image_url ) . ')"></div></a>';
+                        }?>
     					<div class="news">
 	    					<div class="news-title">
 	    						<div class="time_cmnt wow fadeInUp">
@@ -42,20 +44,17 @@
 	    					</div>
 	    					<div class="news-summery text-justify">
 	    					<p class="wow fadeInUp">
-<?php 
-$summery_limit = 180;
-$content = get_the_content();
-$read_more_link = get_the_permalink();
- echo mb_strimwidth($content, 0, $summery_limit, '<a href="'. $read_more_link .'" class="read-more-btn"> READ MORE...</a>');
-?>
+                            <?php 
+                             echo mb_strimwidth(get_the_content(), 0, 180, '<a href="'. get_the_permalink() .'" class="read-more-btn"> '. __('READ MORE...','violet').'</a>');
+                            ?>
                             </p>
 	    					</div>
     					</div>
     				</div>
+                    </div>
+
     			</div>					
-<?php endwhile;?>
-
-
+                <?php endwhile;?>
     		</div>
     	</div>
     </section>

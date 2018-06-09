@@ -59,7 +59,7 @@ function violet_customize_register($wp_customize)
     /* show/hide */
     $wp_customize->add_setting('violet_homeslider_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
 
@@ -74,7 +74,7 @@ function violet_customize_register($wp_customize)
     /* description show/hide */
     $wp_customize->add_setting('violet_descript_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
 
@@ -88,7 +88,7 @@ function violet_customize_register($wp_customize)
     /* Skill show/hide */
     $wp_customize->add_setting('violet_skill_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -97,11 +97,12 @@ function violet_customize_register($wp_customize)
         'section'     => 'header-settings',
         'priority' => 3,
         'type'        => 'ios',// light, ios, flat
+        'active_callback' => 'violet_is_active_custom_meta',
     )));
     /* Services show/hide */
     $wp_customize->add_setting('violet_service_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -110,12 +111,13 @@ function violet_customize_register($wp_customize)
         'section'     => 'header-settings',
         'priority' => 4,
         'type'        => 'ios',// light, ios, flat
+        'active_callback' => 'violet_is_active_custom_meta',
     )));
     
     /* our counter show/hide */
     $wp_customize->add_setting('violet_counter_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -128,7 +130,7 @@ function violet_customize_register($wp_customize)
     /* Portfolio show/hide */
     $wp_customize->add_setting('violet_portfolio_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -137,11 +139,12 @@ function violet_customize_register($wp_customize)
         'section'     => 'header-settings',
         'priority' => 6,
         'type'        => 'ios',// light, ios, flat
+        'active_callback' => 'violet_is_active_custom_meta',
     )));
     /* Testimonial show/hide */
     $wp_customize->add_setting('violet_testimonial_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
 
@@ -150,12 +153,13 @@ function violet_customize_register($wp_customize)
         'section'     => 'header-settings',
         'priority' => 7,
         'type'        => 'ios',// light, ios, flat
+        'active_callback' => 'violet_is_active_custom_meta',
     )));
     
     /* our team show/hide */
     $wp_customize->add_setting('violet_ourteam_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -164,12 +168,13 @@ function violet_customize_register($wp_customize)
         'section'     => 'header-settings',
         'priority' => 8,
         'type'        => 'ios',// light, ios, flat
+        'active_callback' => 'violet_is_active_custom_meta',
     )));
     
     /* our partner show/hide */
     $wp_customize->add_setting('violet_partner_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -178,11 +183,12 @@ function violet_customize_register($wp_customize)
         'section'     => 'header-settings',
         'priority' => 9,
         'type'        => 'ios',// light, ios, flat
+        'active_callback' => 'violet_is_active_custom_meta',
     )));
     /* blog show/hide */
     $wp_customize->add_setting('violet_blog_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -195,7 +201,7 @@ function violet_customize_register($wp_customize)
     /* call to action show/hide */
     $wp_customize->add_setting('violet_call_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -208,7 +214,7 @@ function violet_customize_register($wp_customize)
     /* contact show/hide */
     $wp_customize->add_setting('violet_contact_show', array(
         'sanitize_callback' => 'violet_sanitize_checkbox',
-        'default' => 0,
+        'default' => 1,
         'capability' => 'edit_theme_options'
     ));
     
@@ -398,7 +404,7 @@ function violet_customize_register($wp_customize)
             'transport' => 'postMessage',
             'capability' => 'edit_theme_options',
             'sanitize_callback' => 'esc_url_raw',
-            'default' => '#'
+            'default' => 'https://github.com/serakib'
         ));
         $wp_customize->add_control('main_section_button_link', array(
             'label' => __('Button Link URL', 'violet'),
@@ -457,7 +463,8 @@ function violet_customize_register($wp_customize)
         $wp_customize->add_setting('about_section_title', array(
             'capability' => 'edit_theme_options',
             'transport' => 'postMessage',
-            'sanitize_callback' => 'violet_sanitize_textarea'
+            'sanitize_callback' => 'violet_sanitize_textarea',
+            'default' => __('About Us', 'violet'),
         ));
         $wp_customize->add_control('about_section_title', array(
             'label' => __('About Us Title', 'violet'),
@@ -470,6 +477,7 @@ function violet_customize_register($wp_customize)
             'capability' => 'edit_theme_options',
             'sanitize_callback' => 'wp_kses_post',
             'transport'         => 'postMessage',
+            'default' => __('Your about description hear', 'violet'),
         ));
         $wp_customize->add_control( new Violet_Editor_Control( $wp_customize, 'about_section_desc', array(
             'type'        => 'violet-text-editor',
@@ -494,14 +502,14 @@ function violet_customize_register($wp_customize)
             'transport' => 'postMessage',
             'capability' => 'edit_theme_options',
             'sanitize_callback' => 'esc_url_raw',
-            'default' => '#'
+            'default' => '#',
         ));
         $wp_customize->add_control('about_section_button_cv_link', array(
             'label' => __('CV Button Link URL', 'violet'),
             'settings' => 'about_section_button_cv_link',
             'section' => 'about_section',
             'type' => 'text',
-            'priority' => 4
+            'priority' => 4,
         ));
        $wp_customize->add_setting('about_section_button_hire_text', array(
             'transport' => 'postMessage',
@@ -520,7 +528,7 @@ function violet_customize_register($wp_customize)
             'transport' => 'postMessage',
             'capability' => 'edit_theme_options',
             'sanitize_callback' => 'esc_url_raw',
-            'default' => '#'
+            'default' => '#',
         ));
         $wp_customize->add_control('about_section_button_hire_link', array(
             'label' => __('Hire Button Link URL', 'violet'),
@@ -538,7 +546,8 @@ function violet_customize_register($wp_customize)
         $wp_customize->add_section('violet_myskill_section', array(
             'title' => __('My Skill', 'violet'),
             'priority' => 3,
-            'panel' => 'panel_section'
+            'panel' => 'panel_section',
+            'active_callback' => 'violet_is_active_custom_meta',
         ));
         
         /* title */
@@ -558,7 +567,7 @@ function violet_customize_register($wp_customize)
         $wp_customize->add_setting('violet_myskill_description', array(
             'sanitize_callback' => 'wp_kses_post',
             'default' => __('Provide your skill Description.', 'violet'),
-            'transport' => 'postMessage'
+            'transport' => 'postMessage',
         ));
         $wp_customize->add_control( new Violet_Editor_Control( $wp_customize, 'violet_myskill_description', array(
             'type'        => 'violet-text-editor',
@@ -611,7 +620,8 @@ function violet_customize_register($wp_customize)
             'title' => __('Service section', 'violet'),
             'priority' => 4,
             'panel' => 'panel_section',
-            'description' => __('The main content of this section is customizable in: Dashboard -> Services Our team section.', 'violet')
+            'description' => __('The main content of this section is customizable in: Dashboard -> Services Our team section.', 'violet'),
+            'active_callback' => 'violet_is_active_custom_meta',
         ));
         
         
@@ -701,7 +711,8 @@ function violet_customize_register($wp_customize)
             'title' => __('Portfolio section', 'violet'),
             'priority' => 6,
             'panel' => 'panel_section',
-            'description' => __('The main content of this section is customizable in: Dashboard -> Protfolio.', 'violet')
+            'description' => __('The main content of this section is customizable in: Dashboard -> Protfolio.', 'violet'),
+            'active_callback' => 'violet_is_active_custom_meta',
         ));
         
         /* portfolio title */
@@ -739,7 +750,8 @@ function violet_customize_register($wp_customize)
             'priority' => 7,
             'panel' => 'panel_section',
             'title' => __('Testimonial Section', 'violet'),
-            'description' => __('*You Can Change Background Settings.', 'violet')
+            'description' => __('*You Can Change Background Settings.', 'violet'),
+            'active_callback' => 'violet_is_active_custom_meta',
         ));
         
         
@@ -786,7 +798,8 @@ function violet_customize_register($wp_customize)
         $wp_customize->add_section('violet_ourteam_section', array(
             'title' => __('Our Team', 'violet'),
             'priority' => 8,
-            'panel' => 'panel_section'
+            'panel' => 'panel_section',
+            'active_callback' => 'violet_is_active_custom_meta',
         ));
         
         /* our team title */
@@ -824,7 +837,8 @@ function violet_customize_register($wp_customize)
             'priority' => 9,
             'panel' => 'panel_section',
             'title' => __('Partner Section', 'violet'),
-            'description' => __('*You Can Change Background Settings.', 'violet')
+            'description' => __('*You Can Change Background Settings.', 'violet'),
+            'active_callback' => 'violet_is_active_custom_meta',
         ));
         
         
@@ -889,7 +903,7 @@ function violet_customize_register($wp_customize)
         ));
         $wp_customize->add_setting('blog_sub_title', array(
             'capability' => 'edit_theme_options',
-            'default' => __('your blog Description', 'violet'),
+            'default' => __('Your blog Description', 'violet'),
             'sanitize_callback' => 'wp_kses_post'
         ));
         $wp_customize->add_control( new Violet_Editor_Control( $wp_customize, 'blog_sub_title', array(
@@ -898,6 +912,18 @@ function violet_customize_register($wp_customize)
             'section' => 'blog_area',
             'priority' => 2
         )));
+        $wp_customize->add_setting('blog_posts_per_page', array(
+            'capability' => 'edit_theme_options',
+            'default' => 2,
+            'sanitize_callback' => 'violet_sanitize_textarea'
+        ));
+        $wp_customize->add_control('blog_posts_per_page', array(
+            'label' => __('Number of posts to show', 'violet'),
+            'settings' => 'blog_posts_per_page',
+            'section' => 'blog_area',
+            'type' => 'text',
+            'priority' => 3,
+        ));
 
 
         
@@ -952,7 +978,7 @@ function violet_customize_register($wp_customize)
             'capability' => 'edit_theme_options',
             'transport'   => 'postMessage',
             'sanitize_callback' => 'wp_kses_post',
-            'default' => __('You think we are cool? lets work together', 'violet')
+            'default' => __('<h2>You think we are cool? lets work together</h2>', 'violet')
             
         ));
         $wp_customize->add_control( new Violet_Editor_Control( $wp_customize, 'violet_call_to_message', array(
@@ -1113,7 +1139,7 @@ function violet_customize_register($wp_customize)
     //  =============================
     
     $wp_customize->add_section('social_section', array(
-        'title' => __('Scoial Media Options', 'violet'),
+        'title' => __('Social Media Options', 'violet'),
         'priority' => 10
     ));
 

@@ -1,11 +1,9 @@
-
 <?php
 
 if ( post_password_required() ) {
 	return;
 }
 ?>
-
 
 <div id="comments" class="comments-area wow fadeInUp">
 
@@ -15,12 +13,13 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'violet' ) ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'violet' ) ),
 					number_format_i18n( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			?>
 		</h2>
+<!-- printf( esc_html( _n( 'We deleted %d spam message.', 'We deleted %d spam messages.', $count, 'my-text-domain'  ) ), $count ); -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
@@ -64,41 +63,6 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'violet' ); ?></p>
 	<?php endif; ?>
 
-<?php
-$commenter = wp_get_current_commenter();
-$req = get_option( 'require_name_email' );
-$aria_req = ( $req ? " aria-required='true'" : '' );
-$comments_args = array(
-        // change the title of send button
-        // 'label_submit'=>'Send',
-        // change the title of the reply section
-        // 'title_reply'=>'Write a Reply or Comment',
-        // remove "Text or HTML to be displayed after the set of comment fields"
-	'title_reply'=>'Add Your Comment:',
-	'label_submit'=>'Submit',
-        'comment_notes_before' => '',
-        // redefine your own textarea (the comment body)
-        'comment_field' => '<p class="comment-form-comment"></label><textarea id="comment" name="comment" aria-required="true" placeholder="Message" rows="8" cols="37" wrap="hard"></textarea></p>',
-		'fields' => apply_filters( 'comment_form_default_fields', array(
-
-    'author' =>
-      '<p class="comment-form-author">' .
-      '<input id="author" placeholder="Name" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-      '" size="30"' . $aria_req . ' />' . ( $req ? '<span style="color:red" class="required"></span>' : '' ) . '</p>',
-
-    'email' =>
-      '<p class="comment-form-email">' .
-      '<input id="email" placeholder="Email Address" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-      '" size="30"' . $aria_req . ' />' . ( $req ? '<span style="color:red" class="required"></span>' : '' ) . '</p>',
-
-    'url' =>
-      '<p class="comment-form-url">' .
-      '<input id="url" placeholder="Website URl" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
-      '" size="30" /></p>'
-    )
-  ),
-);
-	
-	comment_form($comments_args); ?>
+	comment_form(); ?>
 
 </div><!-- #comments -->

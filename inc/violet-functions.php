@@ -1,80 +1,12 @@
 <?php
 // Violet functions
 
-
 function violet_custom_css()
   {
   $custom_css = esc_attr(get_theme_mod('custom_css'));
   echo '<style type="text/css">' . $custom_css . '</style>';
   }
-
 add_action('wp_head', 'violet_custom_css');
-
-function violet_primary_color()
-  {
-  $color = esc_attr(get_theme_mod('violet_primary_color','#7f56fd'));
-  $preloader_color = esc_attr(get_theme_mod('violet_preloader_color','#7f56fd'));
-  if ('' != $color) {
-
-  echo '
-    <style type="text/css">
-
-    .wpcf7-form-control-wrap input:focus,
-    .wpcf7-form-control-wrap textarea:focus,
-      h2.comments-title,
-      #respond h3,
-      input.search-btn,
-      .not-found-btn,
-      .about .about-btn,
-      .btn-custom:hover,
-      .btn-custom.active,
-      .blog_latest_post a.read_more:hover,
-      .reply a:hover, .comment-metadata .edit-link a:hover,
-      .about .about-photo .photo .bottom-right-border {
-          border-color: '.$color.';
-      }
-
-      .hero-content .slide-btn:hover,
-      .news .news-summery a.read-more-btn,
-      .hero-content .slide-btn,
-      .call-to-action .call-to-btn {
-          color: '.$color.';
-      }
-
-      input.wpcf7-form-control.wpcf7-submit:hover,
-      #respond .form-submit input,
-      .blog_latest_post a.read_more,
-      .reply a,
-      .comment-metadata .edit-link a,
-      .nav-previous a,
-      .nav-next a,
-      .archive_pagination a,
-      .archive_pagination span.current,
-      input.search-btn,
-      .blog_latest_post a.read_more, .reply a,
-      .comment-metadata .edit-link a,
-      .not-found-btn,
-      .btn-custom:hover,
-      .btn-custom.active,
-      .about .about-btn,
-      .hero-content .slide-btn:hover
-      .title h2:before,
-      .title h2:after {
-          background: '.$color.';
-      }
-      .hero-content .slide-btn:hover{
-        color:#fff;
-      }
-      .home-preloder {
-        background: '.$preloader_color.';
-      }
-    </style>';
-      }
-  }
-
-add_action('wp_head', 'violet_primary_color');
-
-
 
 function theme_author()
   {
@@ -85,24 +17,17 @@ function theme_author()
 
 function get_contact_phone()
   {
-  $contact_phone = '';
-  if (($contact_phone = esc_attr(get_theme_mod('user_phone','01776217594'))) != '') $contact_phone = esc_attr(get_theme_mod('user_phone'));
-  return $contact_phone;
+  return $contact_phone =  esc_attr(get_theme_mod('user_phone','+8801776217594'));
   }
 
 function get_contact_email($public = true)
   {
-  $contact_email = '';
-  if (($contact_email = esc_attr(get_theme_mod('user_email','admin@rakibhossain.cf'))) != '') $contact_email = esc_attr(get_theme_mod('user_email'));
-  return $contact_email;
+  return $contact_email = esc_attr(get_theme_mod('user_email','serakib@gmail.com'));
   }
 
 function get_contact_address()
   {
-  $contact_address = '';
-  if (($contact_address = esc_attr(get_theme_mod('user_address',__('Dhaka, BD','violet')))) != '')
-    return $contact_address;
-  else return '';
+  return $contact_address = esc_attr(get_theme_mod('user_address',__('Dhaka, BD','violet')));
   }
 
 
@@ -160,8 +85,60 @@ function violet_conact_form(){
 }
 
 
+
+function is_violet_plugin_active(){
+  require_once ABSPATH . 'wp-admin/includes/plugin.php';
+  if ( is_plugin_active( 'wp-violet/wp-violet.php' )) {
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function get_query_args_portfolio(){
+  return array( 'post_type' => 'portfolio', 'posts_per_page' => 6);
+}
+
+/**
+ *  Breadcrumb
+ *
+ *
+ */
+if ( ! function_exists( 'violet_breadcrumbs' ) ) :
+
+    /**
+     * Simple breadcrumb.
+     *
+     * @since 1.0.0
+     *
+     * @link: https://gist.github.com/melissacabral/4032941
+     *
+     * @param  array $args Arguments
+     */
+    function violet_breadcrumbs( $args = array() ) {
+        // Bail if Home Page.
+        // if ( is_front_page() || is_home() ) {
+        if ( is_front_page() ) {
+            return;
+        }
+
+        if ( ! function_exists( 'breadcrumb_trail' ) ) {
+            require_once trailingslashit(get_template_directory()) . '/inc/libraries/breadcrumbs.php';
+        }
+
+        $breadcrumb_args = array(
+            'container'   => 'div',
+            'show_browse' => false,
+        );
+        breadcrumb_trail( $breadcrumb_args );
+       
+    }
+
+endif;
+
 function get_social_link()
   {
+
   $social_link = '';
   $social_facebook = esc_url(get_theme_mod('social_facebook', 'Facebook url'));
   $social_twitter = esc_url(get_theme_mod('social_twitter', 'Twitter url'));
@@ -177,3 +154,31 @@ function get_social_link()
 
   return $social_link;
   }
+
+
+function violet_loadmore_ajax_handler(){
+  // prepare our arguments for the query
+  $args = json_decode( stripslashes( $_POST['query'] ), true );
+  $args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
+  $args['post_status'] = 'publish';
+  
+  // it is always better to use WP_Query but not here
+  query_posts( $args );
+ 
+  if( have_posts() ) :
+ 
+    // run the loop
+    while( have_posts() ): the_post();
+ 
+      // look into your theme code how the posts are inserted, but you can use your own HTML of course
+      // do you remember? - my example is adapted for Twenty Seventeen theme
+      get_template_part( 'template-parts/content', 'portfolio');
+      // for the test purposes comment the line above and uncomment the below one
+      // the_title();
+    endwhile;
+  endif;
+  die; // here we exit the script and even no wp_reset_query() required!
+}
+ 
+add_action('wp_ajax_loadmore', 'violet_loadmore_ajax_handler'); // wp_ajax_{action}
+add_action('wp_ajax_nopriv_loadmore', 'violet_loadmore_ajax_handler'); // wp_ajax_nopriv_{action}

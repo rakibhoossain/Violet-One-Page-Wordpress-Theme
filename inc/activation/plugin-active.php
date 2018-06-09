@@ -21,15 +21,9 @@ add_action( 'tgmpa_register', 'violet_register_required_plugins' );
 function violet_register_required_plugins() {
 	$plugins = array(
 		array(
-			'name'               => 'Violet Plugin', // The plugin name.
-			'slug'               => 'violet-plugin', // The plugin slug (typically the folder name).
-			'source'             => 'https://github.com/serakib/violet-plugin/archive/master.zip',
-			'required'           => true,
-			'version'            => '1.0.0',
-			'force_activation'   => true, 
-			'force_deactivation' => true, 
-			'external_url'       => 'https://github.com/serakib/violet-plugin',
-			'is_callable'        => '',
+			'name'               => 'Violet Custom Post Meta', // The plugin name.
+			'slug'               => 'wp-violet', // The plugin slug (typically the folder name).
+			'required'           => false,
 		),
 		array(
 			'name'     => 'Contact Form 7',

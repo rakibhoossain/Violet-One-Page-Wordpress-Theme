@@ -49,6 +49,17 @@ if ( ! function_exists( 'violet_is_active_callback_map' ) ) {
     }
 }
 
+if ( ! function_exists( 'violet_is_active_custom_meta' ) ) {
+    function violet_is_active_custom_meta( $control ) {
+        require_once ABSPATH . 'wp-admin/includes/plugin.php';
+        if ( is_plugin_active( 'wp-violet/wp-violet.php' ) ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 if ( ! function_exists( 'violet_partial_blogname' ) ) {
     function violet_partial_blogname() {
         bloginfo( 'name' );

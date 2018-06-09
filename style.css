@@ -1,14 +1,14 @@
 /*
 Theme Name: Violet
-Version: 1.4.5
+Version: 1.4.7
 Theme URI: http://crazylab.design/
 Author: Rakib Hossain
 Author URI: http://rakibhossain.cf/
 Description: Violet is a full responsive wordpress theme with a focus on postfolio sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, Portfolio Showcase, powerfull customizer and more. Showcase your portfolio. Works great in many languages, for any abilities, and on any device.
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GNU General Public License version 3
+License URI: license.txt
 Text Domain: violet
-Tags: grid-layout, three-columns, right-sidebar, flexible-header, custom-colors, custom-header, custom-background, custom-menu, featured-images, theme-options, portfolio, threaded-comments,translation-ready, blog
+Tags: right-sidebar, flexible-header, custom-colors, custom-header, custom-background, custom-menu, featured-images, portfolio, threaded-comments,translation-ready, blog
 
 Use it to show you talent with others with your portfolio.
 
@@ -16,7 +16,7 @@ Use it to show you talent with others with your portfolio.
 /*-----------------------------------------
 >>> TABLE OF CONTENTS:
 -------------------------------------------
-1.0 Fonts sizes
+1.0 Fonts styles and sizes
 2.0 Reset
 3.0 Buttons
 4.0 Section Title
@@ -34,8 +34,9 @@ Use it to show you talent with others with your portfolio.
 15.0 Partner
 16.0 Blog
    16.1 Single Post
-   16.2 Comment Area
-   16.3 Galleries
+   16.2 Breadcrumb
+   16.3 Comment Area
+   16.4 Galleries
 17.0 Call to action
 18.0 Contact Section
    18.1 Contact Map
@@ -47,25 +48,17 @@ Use it to show you talent with others with your portfolio.
 22.0 404 CSS
 23.0 Responsive Css
 --------------------------------------------
-*/
-/*
-============================================
-      1.0 Fonts sizes
-============================================
-*/
 
-html {
-    font-family: roboto, sans-serif;
-    color: #636262;
-    background: white;
-    font-size: 15px;
-}
+============================================
+      1.0 Fonts styles and sizes
+============================================
+*/
 body {
-    margin: 0;
-    font-family: roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     color: #636262;
     background: white;
-    font-size: 15px;
+    font-size: 16px;
+    margin:0; padding:0;
 }
 h1,
 h2,
@@ -76,6 +69,7 @@ h6,
 p {
     margin: 0;
     padding: 0;
+    line-height: 1.7em;
 
 }
 .member-hover .skill .name,
@@ -91,10 +85,12 @@ p,
 .hero ul li,
 .blog-meta,
 .news-summery {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.7;
 }
 .about-content p {
     font-size: 16px;
+    line-height: 1.7;
 }
 .member-hover .footer ul li,
 .blog .news-title h4 {
@@ -197,7 +193,9 @@ a img.aligncenter {
     padding: 0 4px 5px;
 }
 /* Post Landing Page */
-
+.entry-content {
+    overflow: hidden;
+}
 .sticky {
     position: relative;
 }
@@ -212,7 +210,7 @@ a img.aligncenter {
     top: 1.65em;
     width: 20px;
 }
-
+.center{ width:85%; margin:0 auto;}
 /* Text meant only for screen readers. */
 
 .screen-reader-text {
@@ -244,7 +242,7 @@ a img.aligncenter {
 }
 
 .fixnav-pd {
-    padding-top: 100px;
+    padding-top: 20px;
 }
 .pd-bottom-100 {
     padding-bottom: 100px;
@@ -259,8 +257,8 @@ a img.aligncenter {
     padding-top: 30px;
 }
 .section-padding {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     overflow: hidden;
 }
 .tbl {
@@ -525,7 +523,9 @@ button.close {
 #header {
     transition: all 0.5s ease 0s;
     -moz-transition: all 2s ease 0s;
-    -webkit-transition: all 2s ease 0s; 
+    -webkit-transition: all 2s ease 0s;
+    position: relative;
+    z-index: 999;
 }
 
 #header.header-fix {
@@ -536,18 +536,22 @@ button.close {
     margin-top: 0;
     padding-top: 0;
 }
-
 .logo {
   position: relative;
   z-index: 123;
   float: left;
 }
 .logo a {
-  font-size: 25px;
-  display: inline-block;
-  color: #fff;
-  text-transform: uppercase;
-  margin-top: 4px;
+    font-size: 25px;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+}
+.logo a.logo-img {
+    margin-top: 4px;
+}
+.logo a.logo-text {
+  margin-top: 11px;
 }
 .logo img {
     display: inline-block;
@@ -556,7 +560,6 @@ button.close {
 
 #main-menu{
   position: relative;
-
 }
 #main-menu > ul{
   float: right;
@@ -938,10 +941,9 @@ a.page-numbers:hover {
 }
 .about .about-content .name_skill ul li {
     line-height: 1.733;
-    display: inline-block;
+    display: inline-flex;
     width: 49.5%;
     min-width: 240px;
-    line-height: 26px;
 }
 .about .about-content .name_skill ul li span.text-cap {
     text-transform: uppercase;
@@ -1162,6 +1164,21 @@ a.page-numbers:hover {
 .portfolio .portfolio-item .portfolio-hover .footer p {
     text-transform: capitalize;
 }
+
+.portfolio_loadmore{
+  position: relative;
+  padding: 4px 15px 4px 20px;
+}
+.portfolio_loadmore .portfolio-loading {
+  display: none;
+
+}
+.portfolio_loadmore.loading .portfolio-loading {
+  padding-left: 4px;
+  display: inline-block;
+
+}
+
 /*
 ============================================
      13.0 Testimonial
@@ -1341,9 +1358,11 @@ a.page-numbers:hover {
     display: inline-block;
     width: initial;
     max-height: 90px;
+    opacity: 0.5;
+    transition: 1.5s;
 }
 .partners .partner a:hover img {
-    opacity: 0.5;
+    opacity: 1;
 }
 /*
 ============================================
@@ -1369,7 +1388,7 @@ a.page-numbers:hover {
     background-position: center center;
 }
 .blog .single-news .news {
-    padding: 15px 30px 30px;
+    padding: 15px 10px;
 }
 .blog .news-summery,
 .news-title h4,
@@ -1391,6 +1410,50 @@ a.page-numbers:hover {
     font-size: 14px;
     color: #7f56fd;
     text-transform: uppercase;
+}
+
+.blog-thumb-link{
+  display: block;
+  overflow: hidden;
+}
+
+.blog-thumb-link .blog-thumb:after {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0);
+  transition: background 0.5s;
+}
+.single-news-thumb:hover .blog-thumb:after {
+  background: rgba(0,0,0,0.3);
+}
+.blog-thumb-link .blog-thumb {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  display: block;
+  -o-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -webkit-background-size: cover !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  -ms-transform: scale3d(1,1,1);
+  -o-transform: scale3d(1,1,1);
+  -moz-transform: scale3d(1,1,1);
+  -webkit-transform: scale3d(1,1,1);
+  transform: scale3d(1,1,1);
+}
+.single-news-thumb:hover .blog-thumb {
+  -webkit-transform: scale3d(1.05,1.05,1);
+  -moz-transform: scale3d(1.05,1.05,1);
+  -ms-transform: scale3d(1.05,1.05,1);
+  -o-transform: scale3d(1.05,1.05,1);
+  transform: scale3d(1.05,1.05,1);
 }
 .blog .news-summery a:hover {
     color: #7b7a7a;
@@ -1460,7 +1523,6 @@ a.post-time {
      16.1 Single Post
 ============================================
 */
-
 article.post {
     border: 1px solid #e8ebf7;
     margin-bottom: 50px;
@@ -1478,7 +1540,9 @@ article.post {
     margin: 0;
 }
 .post-title-wrap h3 {
-    margin: 0 0 5px;
+  margin: 0 0 5px;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
 article.post a {
     color: #273f59;
@@ -1492,7 +1556,65 @@ article.post a:hover {
 }
 /*
 ============================================
-      16.2 Comment Area
+      16.2 Breadcrumb
+============================================
+*/
+.breadcrumb-trail.breadcrumbs {
+    margin-bottom: 7px;
+}
+ul.b-crumbs {
+  font-size: 14px;
+  color: #373d54;
+  padding: 0 0 1px 0;
+  margin: 0;
+}
+.maincont-ct ul.b-crumbs {
+  text-align: center;
+}
+.b-crumbs li {
+  display: inline-block;
+  margin: 0 32px 6px 0;
+  padding: 0;
+  line-height: 1.7;
+  position: relative;
+}
+.b-crumbs li:after {
+  position: absolute;
+  content: "\f105";
+  font-size: 12px;
+  font-family: FontAwesome;
+  color: #373d54;
+  display: block;
+  left: auto;
+  top: 0;
+  line-height: 1;
+  margin: 6px 0 0;
+  right: -22px;
+}
+.b-crumbs li:last-child {
+  margin-right: 0;
+}
+.b-crumbs li:last-child:after {
+  display: none;
+}
+.b-crumbs li a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0);
+  transition: all 0.2s;
+  color: #373d54;
+  line-height: 100%;
+}
+.b-crumbs li a:hover {
+  border-bottom: 1px solid #373d54;
+  color: #373d54;
+  text-decoration: none;
+}
+.b-crumbs li span {
+  color: #616161;
+}
+/*
+============================================
+      16.3 Comment Area
 ============================================
 */
 #comments ol{
@@ -1679,7 +1801,7 @@ border-color: #455a64;
 
 /*
 ============================================
-    16.3 Galleries
+    16.4 Galleries
 ============================================
 */
 
@@ -1905,7 +2027,7 @@ input.wpcf7-form-control.wpcf7-submit:hover {
   color: #363636;
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
-  margin-bottom: 30px;
+  margin-bottom: 13px;
   padding-left: 16px;
   width: 100%
 }
@@ -2011,6 +2133,7 @@ div.wpcf7 .ajax-loader{
     position: fixed;
     width: 100%;
     z-index: 9999;
+    
 }
 .home-preloder .spinner {
     margin: 100px auto;
@@ -2193,12 +2316,36 @@ h3.widget-title {
     margin-left: 2px;
 }
 a.tag-cloud-link {
-    display: inline-block;
-    padding: 1px 5px;
-    text-transform: capitalize;
-    margin-bottom: 2px;
+  display: inline-block;
+  padding: 1px 5px;
+  text-transform: capitalize;
+  margin-bottom: 2px;
 }
-
+#wp-calendar{
+  width: 100%;
+  text-align: center;
+}
+.widget_calendar caption{
+    text-align: center;
+    font-size: 18px;
+}
+.widget_calendar table th{
+  background: #7f56fd;
+  color: #fff;
+}.widget_calendar #today{
+  border: 1px solid #ddd;
+}
+.calendar_wrap table td,.calendar_wrap table th{
+  text-align: center;
+}
+.calendar_wrap table td#prev {
+  text-align: left;
+  padding-left: 5px;
+}
+.calendar_wrap table td#next {
+  text-align: right;
+  padding-right: 5px;
+}
 /*
 ============================================
          21.1 Search Form

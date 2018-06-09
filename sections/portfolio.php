@@ -27,53 +27,25 @@
             </div>
         </div>
         <div class="container">
-            <div class="row items">
-                <?php $args = array( 'post_type' => 'portfolio');
-                $loop = new WP_Query( $args );
+            <div class="row items portfolio-post-parent">
+            <?php
+                $loop = new WP_Query( get_query_args_portfolio() );
                 while ( $loop->have_posts() ) : $loop->the_post();
+                    get_template_part( 'template-parts/content', 'portfolio');
+                endwhile;
+            ?>
+            </div>             
+        <?php
 
-                    $post_id = get_the_ID();
-                    $terms = get_the_terms( $post_id, 'portfolio_category' );
-                    $post_custom = get_post_custom($post_id);
-
-                    $portfolio_title = get_the_title();
-
-                    $portfolio_sub = $post_custom["sub_name"][0];
-                    $portfolio_img = $post_custom["portfolio_img"][0];
-                    $portfolio_link = esc_url($post_custom["portfolio_link"][0]);
-                    $portfolio_thumb_url = get_template_directory_uri() . '/screenshot.png';
-
-                    if ( has_post_thumbnail() ) {
-                        $portfolio_thumb_url = wp_get_attachment_url( get_post_thumbnail_id() );
-                    }
-                ?>
-
-                <div class="col-sm-4 col-xs-12 col-md-4 mix <?php if($terms){foreach ($terms as $term) { echo  strtolower(preg_replace('/[^a-zA-Z]+/', '-', $term->name)). ' '; }} ?>">
-                    <div class="portfolio-item  wow fadeInUp">
-                        <div class="portfolio-photo">
-                            <div class="portfolio-thumb" style="background-image: url(<?php echo $portfolio_thumb_url;?>);"></div>
-                            <div class="portfolio-hover animated zoomIn">
-                                <div class="icon">
-                                <?php
-                                    if (strlen($portfolio_link)>=5) {?>
-
-                                <a href="<?php echo $portfolio_link; ?>" target="_blank"><i class="fa fa-search"></i></a>
-                                    <?php
-                                    } else {?>
-                                <a href="<?php echo $portfolio_img; ?>" data-fancybox="images" data-caption="<?php echo $portfolio_title; ?>"><i class="fa fa-search"></i></a>                                        
-                                    <?php } ?>
-
-                                </div>
-                                <div class="footer">
-                                    <h3><?php echo $portfolio_title; ?></h3>
-                                    <p><?php echo $portfolio_sub; ?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endwhile;?>
-            </div>
+        // don't display the button if there are not enough posts
+        if (  $loop->max_num_pages > 1 )
+            echo '
+            <div class="clearfix"></div>
+            <div id="portfolio-load" class="text-center wow fadeInRight">
+                <span class="portfolio_loadmore btn-custom">'.__('Load more', 'violet' ).'<span class="portfolio-loading"><i class="fa fa-circle-o-notch fa-spin"></i></span>
+                </span>
+            </div>';
+        ?>
         </div>
     </section>
 <div class="clear-position"></div>

@@ -1,5 +1,5 @@
 <?php
-
+/*Violet tags*/
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 add_image_size('violet-featured', 730, 340, true);

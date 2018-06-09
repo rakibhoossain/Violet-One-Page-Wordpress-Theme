@@ -2,7 +2,7 @@
     $about_section_title = esc_attr( get_theme_mod('about_section_title',__('About Us','violet')) ); 
     $about_section_desc = get_theme_mod('about_section_desc');
 
-    $user_photo = esc_attr( get_theme_mod('user_photo') ); 
+    $user_photo = esc_attr( get_theme_mod('user_photo', esc_url(get_template_directory_uri() . '/images/rakib.jpg')) ); 
     $user_name = esc_attr( get_theme_mod('user_name',__('Rakib Hossain','violet')) );
     $user_age = esc_attr( get_theme_mod('user_age',__('21','violet')) );
     $user_job = esc_attr( get_theme_mod('user_job',__('Web Developer','violet')) );
@@ -44,11 +44,11 @@
     					</div>
     					<div class="name_skill wow fadeInUp">
     						<ul>
-    							<li><span class="text-cap">NAME</span> : <span id="about_name"><?php echo $user_name; ?></span></li>
-    							<li><span class="text-cap">JOB</span> TITLE : <span id="about_job"><?php echo $user_job; ?></span></li>
-    							<li><span class="text-cap">AgE</span> : <span id="about_age"><?php echo $user_age; ?></span></li>
-    							<li><span class="text-cap">LOCATION</span> : <span id="about_addr"><?php echo get_contact_address(); ?></span></li>
-    						</ul>
+    							<li><span class="text-cap"><?php echo __('Name ','violet'); ?></span> : <span id="about_name"><?php echo $user_name; ?></span></li>
+    							<li><span class="text-cap"><?php echo __('Job Title ','violet'); ?></span> : <span id="about_job"><?php echo $user_job; ?></span></li>
+                                <li><span class="text-cap"><?php echo __('Age ','violet'); ?></span> : <span id="about_age"><?php echo $user_age; ?></span></li>
+                                <li><span class="text-cap"><?php echo __('Location ','violet'); ?></span> : <span id="about_addr"><?php echo get_contact_address(); ?></span></li>
+                            </ul>
     					</div>
                         <div class="sm-center">
                             <a href="<?php echo $about_section_button_cv_link; ?>" id="about_cv" class="violet-btn about-btn wow fadeInLeft">  <?php echo $about_section_button_cv_text; ?> </a>

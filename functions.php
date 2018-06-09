@@ -92,7 +92,9 @@ require get_template_directory() . '/inc/scripts.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /** Menu style **/
-require get_template_directory() . '/inc/menu.php';
+require get_template_directory() . '/inc/theme-style.php';
+
+/** Default Menu **/
 require get_template_directory() . '/inc/menu-items.php';
 
 /** Widgets **/
