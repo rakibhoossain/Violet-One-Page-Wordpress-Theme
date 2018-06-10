@@ -38,20 +38,12 @@ add_filter('wp_title', 'violet_title');
 load_theme_textdomain('violet', get_template_directory() . '/languages');
 
 
-
-
-
+// Nav fallback
 function violet_nav_fallback() {
     echo '<div class="menu-alert">' . __('Use WordPress Menu builder OR Customizer to Manage Menus', 'violet') . '</div>';
 }
 
 
-
-add_action('admin_head', 'admin_theme_setup');
-
-function admin_theme_setup()
-{
-}
 
 // Load Fonts
 
