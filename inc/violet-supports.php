@@ -29,8 +29,7 @@ add_theme_support('post-formats', array(
 ));
 add_theme_support('automatic-feed-links');
 
-function violet_header_customiz()
-  {
+function violet_header_customiz() {
   $violet_header = array(
     'default-image' => '',
     'random-default' => false,
@@ -46,7 +45,7 @@ function violet_header_customiz()
     'admin-preview-callback' => '',
   );
   return $violet_header;
-  }
+}
 
 add_theme_support('custom-header', violet_header_customiz());
 

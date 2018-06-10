@@ -2783,3 +2783,11 @@ input.search-btn:hover {
     *******Stylesheet End*******
 ============================================
 */
+
+.fixed{
+position:fixed;
+top:0;
+right:0;<--this will probably need some adjusting maybe 45px...-->
+overflow-y:scroll;
+height:100%;
+}

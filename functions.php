@@ -10,8 +10,7 @@ register_nav_menus(array(
 
 // Page title
 
-function violet_title($title)
-{
+function violet_title($title) {
     
     // Get the Site Name
     $site_name = get_bloginfo('name');
@@ -42,8 +41,7 @@ load_theme_textdomain('violet', get_template_directory() . '/languages');
 
 
 
-function violet_nav_fallback()
-{
+function violet_nav_fallback() {
     echo '<div class="menu-alert">' . __('Use WordPress Menu builder OR Customizer to Manage Menus', 'violet') . '</div>';
 }
 
@@ -57,8 +55,7 @@ function admin_theme_setup()
 
 // Load Fonts
 
-function violet_fonts_url()
-{
+function violet_fonts_url() {
     $fonts_url   = '';
     /*
      * Translators: If there are characters in your language that are not

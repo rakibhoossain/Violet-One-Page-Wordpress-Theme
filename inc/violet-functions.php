@@ -1,47 +1,40 @@
 <?php
 // Violet functions
 
-function violet_custom_css()
-  {
+function violet_custom_css() {
   $custom_css = esc_attr(get_theme_mod('custom_css'));
   echo '<style type="text/css">' . $custom_css . '</style>';
-  }
+}
 add_action('wp_head', 'violet_custom_css');
 
-function theme_author()
-  {
+function theme_author() {
   $name = 'Rakib Hossain';
   $url = 'http://www.facebook.com/prof.rakib';
   return __("Design &amp; Developed by", "violet") . ' <a href="' . $url . '">' . $name . '</a>';
-  }
+}
 
-function get_contact_phone()
-  {
+function get_contact_phone() {
   return $contact_phone =  esc_attr(get_theme_mod('user_phone','+8801776217594'));
-  }
+}
 
-function get_contact_email($public = true)
-  {
+function get_contact_email($public = true) {
   return $contact_email = esc_attr(get_theme_mod('user_email','serakib@gmail.com'));
-  }
+}
 
-function get_contact_address()
-  {
+function get_contact_address() {
   return $contact_address = esc_attr(get_theme_mod('user_address',__('Dhaka, BD','violet')));
-  }
+}
 
 
-function violet_bg($id)
-  {
+function violet_bg($id) {
   $bg = $id . '_bg';
   $img = esc_attr(get_theme_mod($bg));
   if ($img != '') echo "background-image: url(" . $img . ");";
     else echo "";
-  }
+}
 
 
-function violet_overlay($id)
-  {
+function violet_overlay($id) {
 
   $co = $id . '_color';
   $color = esc_attr(get_theme_mod($co,'rgba(42,1,61,0.88)'));
@@ -50,10 +43,10 @@ function violet_overlay($id)
 
   echo "background-color: " . $color.";";
 
-  }
+}
 
 
-function social_show_link(){
+function social_show_link() {
   $social_show = esc_attr(get_theme_mod('violet_social_show', '0'));
   if (isset($social_show) && $social_show != 0 ) {
     return get_social_link();
@@ -62,7 +55,7 @@ function social_show_link(){
   return '';
 }
 
-function violet_conact_map(){
+function violet_conact_map() {
   $map        = get_theme_mod( 'violet_contact_map' );
   $map_pg        = get_theme_mod( 'violet_map_pg' );
   require_once ABSPATH . 'wp-admin/includes/plugin.php';
@@ -74,7 +67,7 @@ function violet_conact_map(){
   }
 }
 
-function violet_conact_form(){
+function violet_conact_form() {
   $form        = get_theme_mod( 'violet_contact_form' );
   require_once ABSPATH . 'wp-admin/includes/plugin.php';
   if ( is_plugin_active( 'contact-form-7/wp-contact-form-7.php' ) && null != $form && 'default' != $form ) {
@@ -86,7 +79,7 @@ function violet_conact_form(){
 
 
 
-function is_violet_plugin_active(){
+function is_violet_plugin_active() {
   require_once ABSPATH . 'wp-admin/includes/plugin.php';
   if ( is_plugin_active( 'wp-violet/wp-violet.php' )) {
     return true;
@@ -95,7 +88,7 @@ function is_violet_plugin_active(){
   }
 }
 
-function get_query_args_portfolio(){
+function get_query_args_portfolio() {
   return array( 'post_type' => 'portfolio', 'posts_per_page' => 6);
 }
 
@@ -136,8 +129,7 @@ if ( ! function_exists( 'violet_breadcrumbs' ) ) :
 
 endif;
 
-function get_social_link()
-  {
+function get_social_link() {
 
   $social_link = '';
   $social_facebook = esc_url(get_theme_mod('social_facebook', 'Facebook url'));
@@ -153,10 +145,10 @@ function get_social_link()
   if ('' !== get_theme_mod('social_youtube')) $social_link.= '<li><a href="' . $social_youtube . '"><i class="fa fa-youtube">&nbsp;</i></a></li>';
 
   return $social_link;
-  }
+}
 
 
-function violet_loadmore_ajax_handler(){
+function violet_loadmore_ajax_handler() {
   // prepare our arguments for the query
   $args = json_decode( stripslashes( $_POST['query'] ), true );
   $args['paged'] = $_POST['page'] + 1; // we need next page to be loaded

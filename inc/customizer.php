@@ -1,12 +1,11 @@
 <?php
 //  =============================
 //  = Default Theme Customizer Settings  =
-//  @ violet Theme
+//  @ violet
 //  =============================
 
 
-function violet_th_customize_control_enqueue_scripts()
-{
+function violet_th_customize_control_enqueue_scripts() {
     wp_register_script('alpha-color-picker',get_stylesheet_directory_uri() . '/inc/libraries/alpha-color-picker/alpha-color-picker.js');
     wp_register_style('alpha-color-picker',get_stylesheet_directory_uri() . '/inc/libraries/alpha-color-picker/alpha-color-picker.css');
 
@@ -14,8 +13,7 @@ function violet_th_customize_control_enqueue_scripts()
 add_action('customize_controls_enqueue_scripts', 'violet_th_customize_control_enqueue_scripts');
 
 /*theme customizer*/
-function violet_customize_register($wp_customize)
-{
+function violet_customize_register($wp_customize) {
     require_once get_template_directory() . '/inc/libraries/alpha-color-picker/alpha-color-picker.php';
 
     // Load customize callback.
@@ -1260,7 +1258,7 @@ function violet_customize_register($wp_customize)
                 'rgba(50,50,50,0.8)',
                 'rgba( 255, 255, 255, 0.2 )',
             ),
-        'priority' => 6
+        'priority' => 1
     )));
     //Footer bg
     $wp_customize->add_setting('footer_bg_color', array(
@@ -1283,7 +1281,7 @@ function violet_customize_register($wp_customize)
                 'rgba(50,50,50,0.8)',
                 'rgba( 255, 255, 255, 0.2 )'
             ),
-        'priority' => 7
+        'priority' => 2
     )));
     //Primary Color
     $wp_customize->add_setting('violet_primary_color', array(
@@ -1306,7 +1304,7 @@ function violet_customize_register($wp_customize)
                 'rgba(50,50,50,0.8)',
                 'rgba( 255, 255, 255, 0.2 )',
             ),
-        'priority' => 8
+        'priority' => 3
     )));
 
     //Preloader background
@@ -1330,7 +1328,7 @@ function violet_customize_register($wp_customize)
                 'rgba(50,50,50,0.8)',
                 'rgba( 255, 255, 255, 0.2 )',
             ),
-        'priority' => 9
+        'priority' => 4
     )));
 
     if ( isset( $wp_customize->selective_refresh ) ) {

@@ -1,5 +1,5 @@
 <?php 
-    $violet_call_to_message = get_theme_mod('violet_call_to_message',__('You think we are cool? lets work together','violet')); 
+    $violet_call_to_message = get_theme_mod('violet_call_to_message',__('<h2>You think we are cool? lets work together</h2>','violet')); 
 
     $violet_call_to_btn = esc_attr( get_theme_mod('violet_call_to_btn',__('Lets Start','violet')) );
     $violet_call_to_link = esc_url( get_theme_mod('violet_call_to_link',__('#contact','violet')) );

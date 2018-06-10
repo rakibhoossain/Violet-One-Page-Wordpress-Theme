@@ -5,7 +5,7 @@
  * @package Violet
  */
 
-function violet_active_menu_items(){
+function violet_active_menu_items() {
     $sections['home'] = '#top';
     $sections['about'] = '#about';
     $sections['skill'] = '#skill';
@@ -21,7 +21,7 @@ function violet_active_menu_items(){
 // setup navigation automatically
 add_action('load-nav-menus.php', 'violet_nav_creation_primary');
 
-function violet_nav_creation_primary(){
+function violet_nav_creation_primary() {
 
     $menus = violet_active_menu_items();
     $home_url = home_url( '/' );

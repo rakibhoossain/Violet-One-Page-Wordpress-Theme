@@ -103,16 +103,32 @@ $(document).ready(function($){
         $('.testimonial .person').addClass('animated zoomIn').css("opacity","1");
     });
 
-//      $('#sidebar').stickySidebar({
-//     topSpacing: 0,
-//     bottomSpacing: 0,
-//     containerSelector: false,
-//     innerWrapperSelector: '.sidebar__inner',
-//     resizeSensor: true,
-//     stickyClass: 'is-affixed',
-//     minWidth: 0
-// });   
-        
+
+
+/*
+// sticky sidebar script
+   var $sidebar   = $(".sidebar_wrapper"), 
+        $wrapper   = $(".body_wrapper"), 
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 15;
+
+    $window.scroll(function() {
+
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+
+*/
+
+
 //============Partner slider==========  
     $('.partner-slide').owlCarousel({
         center: true,
